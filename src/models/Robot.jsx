@@ -16,11 +16,11 @@ import robotScene from '../assets/3d/robot.glb'
 const Robot = (props) => {
   const robotRef = useRef()
   const { nodes, materials, animations } = useGLTF(robotScene)
-  const { actions } = useAnimations(animations, a.group)
+  const { actions } = useAnimations(animations, robotRef)
   return (
     <a.group ref={robotRef} {...props} >
       <a.group name="Sketchfab_Scene">
-        <a.group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={0.057}>
+        <a.group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={0.087} position={[0.01, -1.5, 1]} >
           <a.group name="000846fff9e546569ee038af7e24655afbx" rotation={[Math.PI / 2, 0, 0]}>
             <a.group name="Object_2">
               <a.group name="RootNode">
