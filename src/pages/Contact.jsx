@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 
 import Fox from '../models/Fox'
+import useAlert from '../hooks/useAlert'
 
 const Contact = () => {
 
@@ -11,11 +12,11 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [isLoading, setIsLoading] = useState(false)
   const [currentAnimation, setCurrentAnimation] = useState('idle')
-  // const { alert, showAlert, hideAlert } = useAlert()
+  const { alert, showAlert, hideAlert } = useAlert()
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
-  }
+   }
 
   const handleFocus = () => setCurrentAnimation('walk')
 
@@ -46,7 +47,7 @@ const Contact = () => {
         // Hide alert
         hideAlert()
       setCurrentAnimation('idle')
-      setForm({ name: "", email: "", message: "" })
+      setForm({ name: "", email: "", message: ""  })
     }, [3000])
 
 
@@ -62,6 +63,8 @@ const Contact = () => {
   return (
     <section className="relative flex lg:flex-row flex-col 
     max-container h-[100vh]">
+      {alert.show && <Alert {...alert} />}
+      
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in touch</h1>
         <form 
