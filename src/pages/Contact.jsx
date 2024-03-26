@@ -1,23 +1,68 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
 
+  const formRef = useRef(null)
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [isLoading, setIsLoading] = useState(false)
   const [currentAnimation, setCurrentAnimation] = useState('idle')
+  // const { alert, showAlert, hideAlert } = useAlert()
 
-
-  const handleChange = () => {}
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
 
   const handleFocus = () => {}
 
   const handleBlur = () => {}
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setIsLoading(true)
+
+    emailjs.send(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+    {
+      from_name: form.name,
+      to_name: "Mekarosi",
+      from_email: form.email,
+      to_email: 'kidslovecode2@gmail.com',
+      message: form.message
+    },
+    import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+  ).then(() => {
+    setIsLoading(false)
+    // Show success message
+    showAlert({ show: true, text: 'Message sent successfully!', type: 'success' })
+  
+    setTimeout(() =>{
+        // Hide alert
+        hideAlert()
+      setCurrentAnimation('idle')
+      setForm({ name: "", email: "", message: ""  })
+    }, [3000])
+
+
+  }).catch((error) => {
+    setIsLoading(false)
+    setCurrentAnimation('idle')
+    console.log(error);
+    // Show error message
+    showAlert({ show: true, text: 'Message not sent!', type: 'danger' })
+  })
+  }
+
   return (
     <section className="relative flex lg:flex-grow flex-col max-container">
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in touch</h1>
-        <form className='w-full flex flex-col gap-7'>
+        <form 
+          className='w-full flex flex-col gap-7'
+          onSubmit={handleSubmit}
+        >
+          
         <label className='text-black-500 font-semibold'>
             Name
             <input 
