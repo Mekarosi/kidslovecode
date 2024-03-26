@@ -17,13 +17,14 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleFocus = () => {}
+  const handleFocus = () => setCurrentAnimation('walk')
 
-  const handleBlur = () => {}
+  const handleBlur = () => setCurrentAnimation('idle')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setIsLoading(true)
+    setCurrentAnimation('hit')
 
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -45,7 +46,7 @@ const Contact = () => {
         // Hide alert
         hideAlert()
       setCurrentAnimation('idle')
-      setForm({ name: "", email: "", message: ""  })
+      setForm({ name: "", email: "", message: "" })
     }, [3000])
 
 
@@ -59,7 +60,8 @@ const Contact = () => {
   }
 
   return (
-    <section className="relative flex lg:flex-grow flex-col max-container">
+    <section className="relative flex lg:flex-row flex-col 
+    max-container h-[100vh]">
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in touch</h1>
         <form 
@@ -120,7 +122,7 @@ const Contact = () => {
             </button>
         </form>
       </div>
-      <div className='lg:w-1/2 w-full lg:*:h-auto md:h-[550px] h-[350px]'>
+      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
         <Canvas 
           camera={{ 
             position: [0, 0, 5],
@@ -134,7 +136,6 @@ const Contact = () => {
           <Suspense fallback={<Loader />}>
             <Fox 
               currentAnimation={currentAnimation}
-
               position={[0.5, 0.35, 0]}
               rotation={[12.6, -0.6, 0]} 
               scale={[0.5, 0.5, 0.5]}
