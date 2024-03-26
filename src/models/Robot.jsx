@@ -18,7 +18,7 @@ const Robot = ({isRotating, setIsRotating , setCurrentStage, ...props}) => {
   const { nodes, materials, animations } = useGLTF(robotScene)
   const { actions } = useAnimations(animations, robotRef)
   
-  console.log(actions)
+ 
   
   const { gl, viewport } = useThree()
   
@@ -130,7 +130,6 @@ useEffect(() => {
   
   if(isRotating){
   actions['Experiment'].play()
-  console.log(actions)
   }
  
 }, [actions, isRotating])
