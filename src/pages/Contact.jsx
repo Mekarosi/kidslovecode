@@ -2,7 +2,7 @@ import React, { useRef, useState, Suspense } from 'react'
 import emailjs from '@emailjs/browser'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
-
+import Alert from '../components/Alert';
 import Fox from '../models/Fox'
 import useAlert from '../hooks/useAlert'
 
@@ -64,7 +64,7 @@ const Contact = () => {
     <section className="relative flex lg:flex-row flex-col 
     max-container h-[100vh]">
       {alert.show && <Alert {...alert} />}
-      
+
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in touch</h1>
         <form 
