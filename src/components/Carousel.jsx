@@ -31,7 +31,6 @@ const Carousel = ({ images }) => {
         },
       },
     };
-    
     const handleNext = () => {
       setDirection("right");
       setCurrentIndex((prevIndex) =>
@@ -41,6 +40,7 @@ const Carousel = ({ images }) => {
   
     const handlePrevious = () => {
       setDirection("left");
+  
       setCurrentIndex((prevIndex) =>
         prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
       );

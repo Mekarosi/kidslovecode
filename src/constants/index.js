@@ -320,4 +320,37 @@ export const projects = [
         preview: 'https://memories-app907.netlify.app/posts',
         link: 'https://github.com/Mekarosi/memories_app'
     }
+
 ];
+export const codeImportant = [
+    {
+        message:"Cognitive Development", 
+        detail:"Coding isn't just about typing lines of text; it's about problem-solving, logical thinking, and creativity. Learning to code enhances critical thinking skills, encourages analytical reasoning, and fosters a mindset of perseverance in the face of challenges."
+    },
+    {
+        message:"Future-Proofing Careers", 
+        detail:"The demand for individuals with coding skills is skyrocketing across various industries. By introducing your child to coding at an early age, you're laying a solid foundation for future career opportunities in fields such as technology, engineering, medicine, finance, and beyond. Whether they dream of becoming software engineers, data analysts, or entrepreneurs, proficiency in coding will give them a competitive edge."
+    },
+    {
+        message:"Fostering Innovation", 
+        detail: "Coding empowers children to turn their ideas into reality. It sparks creativity and encourages them to think outside the box. Through coding projects, they learn to innovate, design solutions to real-world problems, and create something truly meaningful. From developing apps to designing websites, the possibilities are endless."
+    },
+    { 
+        message: "Enhanced Problem-Solving Skills",  
+        detail: "Coding involves breaking down complex problems into smaller, more manageable parts—a skill that is invaluable in all aspects of life. By grappling with coding challenges, children learn to approach problems systematically, analyze them from different angles, and develop effective solutions—an ability that transcends the realm of programming and applies to various academic subjects and real-life situations." 
+    },
+    { 
+        message:"Collaboration and Communication", 
+        detail: "In today's interconnected world, collaboration and communication skills are essential. Coding often involves teamwork, whether it's collaborating on open-source projects or working in interdisciplinary teams. Through coding, children learn to communicate effectively, articulate their ideas, and collaborate with peers—skills that are vital for success in the 21st-century workforce."
+    },
+    {
+        message: "Boosting Confidence and Self-Efficacy", 
+        detail: "As children master coding concepts and see their projects come to life, their confidence soars. They develop a sense of pride and accomplishment, knowing that they have the skills to create something meaningful. This boost in self-efficacy not only fuels their passion for learning but also prepares them to tackle challenges with confidence in the future."
+},
+    {
+        message:"Digital Literacy and Responsible Tech Use", 
+        detail: "In today's digital age, it's crucial for children to understand how technology works and its impact on society. By learning to code, children gain a deeper understanding of technology, its capabilities, and its ethical implications. They become informed digital citizens who can navigate the digital landscape responsibly and ethically."
+    },
+    
+];
+
