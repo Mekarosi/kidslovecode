@@ -19,58 +19,59 @@ const DisplayText = () => {
    
 
   return (
-    <section>
+    <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
 
-    <div className='border-spacing-20 to-blue-300'>
-        <div className='flex flex-row gap-11 pb-5'>
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
           <h3 key={info[0]}>{info[0].message}</h3>
           <img onClick={(e) => {setShow1(!show1)}} src={show1 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div>
       {show1 === true ? (<h3 className='pb-5'>{info[0].detail}</h3>) : ""}
     </div>
 
-    <div>
-        <div className='flex flex-row gap-11 pb-5'>
+
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
           <h3 key={info[1]}>{info[1].message}</h3>
           <img onClick={(e) => {setShow2(!show2)}} src={show2 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div>
       {show2 === true ? (<h3 className='pb-5'>{info[1].detail}</h3>) : ""}
     </div>
 
-    <div>
-        <div className='flex flex-row gap-11 pb-5'>
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
           <h3 key={info[2]}>{info[2].message}</h3>
           <img onClick={(e) => {setShow3(!show3)}} src={show3 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div>
       {show3 === true ? (<h3 className='pb-5'>{info[2].detail}</h3>) : ""}
     </div>
 
-    <div>
-        <div className='flex flex-row gap-11 pb-5'>
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
           <h3 key={info[3]}>{info[3].message}</h3>
           <img onClick={(e) => {setShow4(!show4)}} src={show4 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div>
       {show4 === true ? (<h3 className='pb-5'>{info[3].detail}</h3>) : ""}
     </div>
 
-    <div>
-        <div className='flex flex-row gap-11 pb-5'>
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
           <h3 key={info[4]}>{info[4].message}</h3>
           <img onClick={(e) => {setShow5(!show5)}} src={show5 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div>
       {show5 === true ? (<h3 className='pb-5'>{info[4].detail}</h3>) : ""}
     </div>
 
-    <div>
-        <div className='flex flex-row gap-11 pb-5'>
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
             <h3 key={info[5]}>{info[5].message}</h3>
             <img onClick={(e) => {setShow6(!show6)}} src={show6 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div>
       {show6 === true ? (<h3 className='pb-5'>{info[5].detail}</h3>) : ""}
     </div>
 
-    <div >
-        <div className='flex flex-row gap-11 pb-5'>
+    <div className='border-solid border-2 border-gray-400 rounded-lg w-96 pt-5 pl-5 mb-5'>
+        <div className='flex justify-between pb-5 pr-5'>
           <h3 key={info[6]}>{info[6].message}</h3>
           <img onClick={(e) => {setShow7(!show7)}} src={show7 === false ? right : down} className='w-4 h-4 object-contain'/>
         </div> 
