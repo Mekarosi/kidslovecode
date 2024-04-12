@@ -1,6 +1,6 @@
 import Home from './Home'
 import About from './About'
-import Activities from './Activities'
+import Programs from './Programs'
 import Contact from './Contact'
 
-export { Home, About, Activities, Contact }
+export { Home, About, Programs, Contact }

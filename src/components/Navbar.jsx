@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
+import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai"
+import { programsDrowdown  } from '../constants'
 
 const Navbar = () => {
+   const [isOpen, setIsOpen] = useState(false)
   return (
     <header className='header'>
        <NavLink to='/' className="w-30 h-10 rounded-lg bg-white p-2 items-center justify-center flex font-bold shadow-md">
@@ -11,8 +14,22 @@ const Navbar = () => {
           <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
              About
           </NavLink>
-          <NavLink to="/activities" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
-             Activities
+          <NavLink to="/programs" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'} onClick={() => setIsOpen((prev) =>!prev)}>
+             <div className='flex justify-between'>
+                        programs
+                        {!isOpen ? ( 
+                     <AiOutlineCaretDown className='h-8' />
+                  ) : ( 
+                     <AiOutlineCaretUp className='h-8' />)
+               }
+             </div>
+      {isOpen && (
+         <div className=''>
+            {programsDrowdown.map((program, i) => (
+               <div>{program.title}</div>
+            )) }
+         </div>
+      )}
           </NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
              Contact 

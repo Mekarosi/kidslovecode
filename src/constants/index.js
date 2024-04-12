@@ -354,3 +354,10 @@ export const codeImportant = [
     
 ];
 
+export const programsDrowdown = [
+    {title: 'Primary School'},
+    {title: 'Junior Secondary School'},
+    {title: 'Senior Secondary School'},
+    {title: "Private 'one-on-one' Classes"},
+    {title: 'Online Classes'},
+]
