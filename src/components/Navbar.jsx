@@ -14,9 +14,9 @@ const Navbar = () => {
           <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
              About
           </NavLink>
-          <NavLink to="/programs" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'} onClick={() => setIsOpen((prev) =>!prev)}>
+          <NavLink className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'} onClick={() => setIsOpen((prev) =>!prev)}>
              <div className='flex justify-between'>
-                        programs
+                        Programs
                         {!isOpen ? ( 
                      <AiOutlineCaretDown className='h-8' />
                   ) : ( 
@@ -24,11 +24,16 @@ const Navbar = () => {
                }
              </div>
       {isOpen && (
+         
          <div className=''>
             {programsDrowdown.map((program, i) => (
-               <div>{program.title}</div>
+               <NavLink to={program.link} className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
+                  <h3>{program.title}</h3>
+               </NavLink>
             )) }
          </div>
+      
+         
       )}
           </NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>

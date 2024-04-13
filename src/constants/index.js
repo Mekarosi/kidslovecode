@@ -355,9 +355,16 @@ export const codeImportant = [
 ];
 
 export const programsDrowdown = [
-    {title: 'Primary School'},
-    {title: 'Junior Secondary School'},
-    {title: 'Senior Secondary School'},
-    {title: "Private 'one-on-one' Classes"},
-    {title: 'Online Classes'},
+    {title: 'Private Online Tutoring',
+     link: '/online-tutoring'
+    },
+    {title: "Private 'one-on-one' Tutoring",
+     link: '/one-on-one-tutoring'
+    },
+    {title: 'School Tutoring',
+     link: '/online-tutoring'
+    },
+    {title: 'Camps',
+     link: '/camps-tutoring' 
+    },
 ]
