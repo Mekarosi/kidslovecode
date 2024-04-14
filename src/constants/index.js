@@ -362,7 +362,7 @@ export const programsDrowdown = [
      link: '/one-on-one-tutoring'
     },
     {title: 'School Tutoring',
-     link: '/online-tutoring'
+     link: '/school-tutoring'
     },
     {title: 'Camps',
      link: '/camps-tutoring' 
